@@ -8,8 +8,9 @@ public class DatabaseConnection {
 	private static ThreadLocal<Connection> threadLocal = new ThreadLocal<Connection>() ;
 	private static final String DBDRIVER = "org.gjt.mm.mysql.Driver" ;
 	private static final String DBURL = "jdbc:mysql://localhost:3306/emdb" ;
-	private static final String DBUSER = "root" ;
-	private static final String PASSWORD = "mysqladmin" ;
+	//此处填写要连接的mysql数据库的用户名和密码
+	private static final String DBUSER = "****" ;
+	private static final String PASSWORD = "******" ;
 	public static void close() {
 		Connection conn = threadLocal.get() ;
 		if (conn != null) {
