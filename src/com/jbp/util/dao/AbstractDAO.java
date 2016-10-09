@@ -13,6 +13,11 @@ public class AbstractDAO {
 	public AbstractDAO() {
 		this.conn = DatabaseConnection.get() ;
 	}
+	/**
+	 * 查询最后一次自动增长的值
+	 * @return 返回整型数值
+	 * @throws SQLException
+	 */
 	public Integer getLastId() throws SQLException {
 		String sql = "SELECT LAST_INSERT_ID()" ;
 		this.pstmt = this.conn.prepareStatement(sql) ;
