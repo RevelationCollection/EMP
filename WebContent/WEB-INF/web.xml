@@ -29,7 +29,7 @@
 		</init-param>
 		<init-param>	<!-- 设置验证码显示文字尺寸 -->
 			<param-name>kaptcha.textproducer.font.size</param-name>
-			<param-value>30</param-value>
+			<param-value>39</param-value>
 		</init-param>
 		<init-param>	<!-- 设置验证码保存到session中的属性名称 -->
 			<param-name>kaptcha.session.key</param-name>
