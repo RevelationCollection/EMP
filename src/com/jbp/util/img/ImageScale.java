@@ -21,14 +21,14 @@ public class ImageScale {
 	 */
 	public static boolean scale(String savePath, String srcPath) {
 		// -----------------------上传完成，开始生成缩略图-------------------------
-		java.io.File file1 = new java.io.File(srcPath); // 读入刚刚上传的文件
-		File file2 = new File(savePath);
-		if (!file2.getParentFile().exists()) { // 保存目录不存在
-			file2.getParentFile().mkdirs();
+		java.io.File srcFile = new java.io.File(srcPath); // 读入刚刚上传的文件
+		File saveFile = new File(savePath);
+		if (!saveFile.getParentFile().exists()) { // 保存目录不存在
+			saveFile.getParentFile().mkdirs();
 		}
 		FileOutputStream newImage = null;
 		try {
-			Image image = javax.imageio.ImageIO.read(file1);// 构造Image对象
+			Image image = javax.imageio.ImageIO.read(srcFile);// 构造Image对象
 			float tagSize = 150;// 保存大小
 			int oldWidth = image.getWidth(null);// 原来图片宽度
 			int oldHeight = image.getHeight(null);// 原来图片高度
